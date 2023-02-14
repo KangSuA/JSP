@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin Padding Test</title>
+    <style>
+        div{
+            border:1px solid goldenrod;
+            width: 200px;
+            height: 200px;
+            /*float 좌우정렬 : left right*/
+            float:left;
+            /*태두리바깥쪽 여백 설정
+            margin-top margin-right margin-bottom margin-left
+            top,bottom은 맞물려서 하나만 적용됨.
+            right,left는 둘 다 적용됨.
+            margin-left:100px;
+            margin-top:50px;
+            margin-bottom:50px;
+            margin-right:100px;*/
+            
+            margin:50px 100px;
+
+            /*테두리와 컨텐츠사이의 여백 확보
+            padding-top right bottom left
+            padding-top:50px;
+            padding-left:30px;*/
+            padding:50px 0px 0px 30px;
+        }
+    </style>
+</head>
+<body>
+    <div style="background:mediumaquamarine">
+        Margin Margin Margin Margin Margin Margin Margin
+    </div>
+    <div>
+        Padding
+    </div>
+    <div style="background:darkolivegreen ">
+        Test
+    </div>
+    <h1>확인하기</h1>
+</body>
+</html>

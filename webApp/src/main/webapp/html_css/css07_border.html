@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+        /*
+            border-style : 선의 모양(solid,dotted,dashed,double,none,groove)
+        */
+        div{
+           /* border-style: dashed dotted none; 시계방향으로 돌아감. 없으면 맞은편
+            border-color:brown;
+            border-width: 3px;
+            */
+            border: 5px solid olivedrab;
+            border-radius: 50px;
+            margin:30px;
+            padding:10px;
+            width:200px;
+            height: 200px;
+            overflow:scroll;/*hidden, auto, scroll*/
+        }
+        img{
+            border-radius: 20px;
+            width:300px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        - 학습 데이터로 fit(), transform()을 적용한 후 테스트 데이터에서 다시 fit()을 수행하지 않고 학습 데이터로 fit()을 적용한 결과를 이용해서 transform()을 적용해야 한다.
+- 머신러닝 모델이 학습 데이터(train set)에 관해서만 학습을 해야 하는데, 오직 평가에서만 사용해야 할 테스트 데이터(test set)를 머신러닝 모델이 학습을 하게 되면 모델의 성능을 제대로 평가할 수 없다. 테스트 데이터로 다시 새로운 스케일링 기준을 만들어서 학습해 버리면 스케일링 기준 정보가 학습 데이터에서의 기준과 달라질 수 있어서다.
+- 정리하면, 머신러닝 모델은 학습 데이터를 기반으로 학습이 되므로 반드시 테스트 데이터는 학습 데이터의 스케일링 기준을 따라야 한다. 따라서 테스트 데이터에는 다시 fit()을 적용해서는 안 된다.
+    </div>
+    <div>
+        - 학습 데이터로 fit(), transform()을 적용한 후 테스트 데이터에서 다시 fit()을 수행하지 않고 학습 데이터로 fit()을 적용한 결과를 이용해서 transform()을 적용해야 한다.
+- 머신러닝 모델이 학습 데이터(train set)에 관해서만 학습을 해야 하는데, 오직 평가에서만 사용해야 할 테스트 데이터(test set)를 머신러닝 모델이 학습을 하게 되면 모델의 성능을 제대로 평가할 수 없다. 테스트 데이터로 다시 새로운 스케일링 기준을 만들어서 학습해 버리면 스케일링 기준 정보가 학습 데이터에서의 기준과 달라질 수 있어서다.
+- 정리하면, 머신러닝 모델은 학습 데이터를 기반으로 학습이 되므로 반드시 테스트 데이터는 학습 데이터의 스케일링 기준을 따라야 한다. 따라서 테스트 데이터에는 다시 fit()을 적용해서는 안 된다.
+    </div>
+    <img src="./img/01.jfif"/>
+</body>
+</html>

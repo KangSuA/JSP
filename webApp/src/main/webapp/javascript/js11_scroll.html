@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var imgName = ['glass1.gif','glass2.gif','glass3.gif','01.jfif'];
+        function setImage(){
+            var imgTag="";
+            for(var i=0; i<imgName.length; i++){
+                imgTag += "<img src='../img/"+imgName[i]+"'/><br/>";
+            }
+            console.log(imgTag);
+            document.getElementById("imgView").innerHTML=imgTag;
+
+            console.log(window.scrollY,document.documentElement.scrollTop);
+            //window.scrollTo(x,y); 절대
+            //window.scrollBy(x,y); 상대
+        }
+        function scrollAuto(){
+            window.scrollBy(0,10);
+            console.log("y="+window.scrollY);
+        }
+        var timer;
+    </script>
+</head>
+<body onload="setImage(); timer = setInterval('scrollAuto()',500);">
+    <h1>스크롤 이벤트</h1>
+    <!--onmouseover(onmouseenter): 객체에 마우스가 들어오면 발생
+        onvouseout(onmouseleave): 객체에 마우스가 나가면 발생
+    -->
+    <div id="imgView" onmouseover="clearInterval(timer)" onmouseout="timer=setInterval('scrollAuto()',500)" ></div>
+</body>
+</html>

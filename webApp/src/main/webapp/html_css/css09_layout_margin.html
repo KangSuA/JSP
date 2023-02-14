@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        body{
+            margin:0px;
+        }
+        .header{
+            background:beige;
+            height:200px;
+        }
+        .container{
+            background-color: darkseagreen;
+            width:1000px;
+            margin:0 auto; /*auto : div를 전체폭의 가운데로 배치*/
+        }
+        .footer{
+            background-color: beige;
+            height:100px;
+        }
+        .header>div{
+            background-color: aliceblue;
+            height:150px;
+            width:1000px;
+            margin:0 auto;
+            font-size: 3em; /*px, pt, cm, mm, inch, 1em=기본크기*/
+            text-align:center; /*문자를 left,center,right로 좌우정렬 */
+            line-height:150px;
+        }
+        /*메뉴 만들기*/
+        .topMenu, .topMenu>li {
+            margin:0;
+            padding:0;
+
+        }
+        .topMenu{
+            height:50px;
+            width:1000px;
+            margin:0 auto;
+            
+        }
+        
+        .topMenu>li{
+            float:left;
+            /*background:powderblue;*/
+            list-style-type: none;
+            width:20%;
+            height:50px;
+            line-height:50px;
+            text-align: center; /*좌우정렬: left,right,center*/
+            font-size: 1.2em;
+            
+        }
+        /*
+        a태그 링크시 스타일
+        링크시 :link 방문페이지 :visited 마우스오버 :hover 누른상태 :active
+        text-decoration : underline, overline, line-through, none
+        */
+        /*a:link{
+            color:chocolate;
+            text-decoration: none;
+        }
+        a:visited{
+            color:darkred;
+            text-decoration: none;
+        }
+        
+        a:hover{
+            color:crimson;
+            text-decoration:none;
+        }
+        a:active{
+            color:cadetblue
+        }*/
+        a:link, a:visited{
+            color: brown;
+            text-decoration: none;
+        }
+        a:hover{
+            color:cadetblue;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            멀티캠퍼스
+        </div>
+        <ul class="topMenu" >
+            <li><a href="./html01_index.html">홈</a> </li>
+            <li><a href="https://www.nate.com" target="_blank">네이트</a> </li>
+            <li><a href="#">커뮤니티</a> </li>
+            <li><a href="#">로그인</a> </li>
+            <li><a href="#">고객센터</a> </li>
+        </ul>
+    </div>
+    <div class="container">
+        <br/>
+        <h1>contents</h1>
+        <img src="./img/01.jfif"/>
+    </div>
+    <div class="footer">
+        하단
+    </div>
+</body>
+</html>

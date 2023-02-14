@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="main">
+    <h1>자바스크립트 변수, 상수</h1>
+    <script>
+        //이름과 나이를 저장할 변수. 생략,var,let,const
+        var name = "강수아";
+        name = "김영미";
+        document.write("name=",name);
+
+        var age = 23;
+
+        var bg = confirm("배경에 이미지를 설정할까요?");
+
+        if(bg){
+            var bodyTag=document.getElementById("main");
+            bodyTag.style.color="#00f";
+            document.getElementById("main").style.backgroundImage = "url(../img/01.jfif)";
+        }
+        var userid="abcd"
+        document.write(userid);
+    </script>
+</body>
+</html>

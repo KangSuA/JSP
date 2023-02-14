@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment_01_KangSuah</title>
+    <style>
+        form{
+            width: 600px;
+            height:500px;
+            margin:auto;
+            /*border:1px black solid;*/
+            font-family: "나눔고딕";
+        }
+        #title{
+            text-align: center;
+            font-size: 2em;
+            margin:30px 0;
+        }
+        #discript{
+            text-align: center;
+            color:rgb(128,128,128);
+            margin:30px 0;
+            line-height:25px;
+        }
+        input[name^='user']{
+            border:black solid 1.5px;
+            height:50px;
+            width:480px;
+            margin:0 auto;
+            padding-left:20px;
+            display:block;
+            
+        }
+        input::placeholder{
+            color:black;
+            font-weight: bold;
+        }
+        input[type='submit']{
+            background-color: rgb(12,130,233);
+            border:solid 0px;
+            color:white;
+            height:50px;
+            width:507px;
+            margin:5px auto;
+            text-align:center;
+            font-size:1.1em;
+            display:block;
+            font-weight:500;
+        }
+        input[type='button']{
+            background-color: rgba(0,0,0,0);
+            color:rgb(128,128,128);
+            border: 0px;
+            width:150px;
+        }
+        input[value^='아']{
+           margin-left:70px;
+        }
+        img{
+            height:10px;
+            width:1px;  
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div id="title">서울시 통합회원 로그인</div>
+        <div id="discript">
+            서울특별시 누리집을 방문해주셔서 감사합니다.<br/>
+           로그인하시면 보다 편리하게 서비스 이용이 가능합니다.<br/>
+        </div>
+        <input id="in" type="text" name="userId" maxlength="15" placeholder="아이디(5~15자의 영문, 숫자만 가능)" /><br/>
+        <input id="in" type="password" name="userPwd" placeholder="비밀번호" /><br/>
+        <input type="submit" value="로그인"/><br/>
+        <input type="button" value="아이디 찾기"/>
+        <img src="./img/bar.png"/>
+        <input type="button" value="비밀번호 찾기"/>
+        <img src="./img/bar.png"/>
+        <input type="button" value="회원가입"/>
+    </form>
+</body>
+</html>

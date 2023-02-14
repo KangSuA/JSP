@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" ></script>
+<script>
+	$(function(){
+		// 위치선택자
+		$('.lst>li:odd').css('background-color','yellow');
+		$('.lst>li:even').css('color','red');
+		$('.lst>li:first').css('background-color','#ddd');
+		$('.lst>li:last').css('color','blue');
+		
+		// 함수형태의 필터 선택자
+		$('.lst2>li').eq(2).css('color','red'); //index
+		$('.lst2>li:lt(4)').css('background-color','pink');
+	});
+</script>
+</head>
+<body>
+	<ul class="lst">
+	<li>네이트</li>
+	<li>네이버</li>
+	<li>다음</li>
+	<li>구글</li>
+	<li>쿠팡</li>
+	<li>지마켓</li>
+	<li>예스24</li>
+	<li>잡코리아</li>
+	</ul>
+	
+	<ul class="lst2">
+	<li>네이트</li>
+	<li>네이버</li>
+	<li>다음</li>
+	<li>구글</li>
+	<li>쿠팡</li>
+	<li>지마켓</li>
+	<li>예스24</li>
+	<li>잡코리아</li>
+	</ul>
+
+</body>
+</html>

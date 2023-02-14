@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background: #ddd;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="arrayData1"></div>
+    <div id="arrayData2"></div>
+    <div id="asc1"></div>
+    <div id="asc2"></div>
+    <div id="desc1"></div>
+    <div id="desc2"></div>
+    <script>
+        var num=[252,96,5,16,498,52,12];
+        var str=['orange','banana','apple','pineapple','peach','tomato','melon','mango'];
+
+        document.getElementById("arrayData1").innerHTML='<b>num->'+num+'</b>';
+        document.getElementById("arrayData2").innerHTML='<i>num->'+str+'</i>';
+
+        str.sort();
+        document.getElementById("asc2").innerHTML ='string asc->'+str;
+        str.reverse();
+        document.getElementById("desc2").innerHTML = 'string desc->'+str;
+        num.sort(function(x,y){return x-y});
+        document.getElementById("asc1").innerHTML="number asc->"+num;
+        num.sort(function(x,y){return y-x});
+        document.getElementById("desc1").innerHTML="number desc->"+num;
+    </script>
+</body>
+</html>
