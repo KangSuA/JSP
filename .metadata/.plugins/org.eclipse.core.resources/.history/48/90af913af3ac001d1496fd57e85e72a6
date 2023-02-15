@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" ></script>
+</head>
+<body>
+<div id='menu'></div>
+<hr/>
+<div id='article'></div>
+금리 인상으로 전세자금대출 이자 부담이 커진 데다 전세 사기에 대한 우려가 확산되면서 전세보다 월세로 임대차 계약을 체결하는 수요자들이 늘었기 때문으로 풀이된다.
+15일 국토교통부의 실거래가 공개시스템 자료에 따르면, 2022년 서울 소형빌라 월세 거래 총 4만3917건 가운데 월세 100만원이 넘는 거래는 3018건으로 집계됐다. 이는 국토부가 관련 통계 집계를 시작한 2011년 이래 가장 많은 수치다.
+월세 100만원이 넘는 서울 소형빌라는 2011년부터 2019년까지 1000건 이하로 유지하다 2020년 1027건, 2021년 1693건으로 점차 증가하더니 작년에는 3000건을 돌파했다.
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" ></script>
+<script>
+	$(function(){
+		//글자색, 배경색 선택할 수 있는 select태그
+		var sel = "<select>";
+			sel += "<option value='color'>글자색</option>";
+			sel += "<option value='background-color'>배경색</option>";
+			sel += "</select>";
+		
+		//컬러명
+		var rgb = ['rgb(255,0,0)','blue','#0f0','#888','pink','cyan','orange','yellow'];
+		var colorName = ['빨강','파랑','초록','회색','분홍','청록','주황','노랑'];
+		
+		var colorSel ='<select>';
+		rgb.map(function(data, idx){
+			colorSel += "<option value='"+data+"'>"+colorName[idx]+"</option>";
+		});
+		colorSel += "</select>";
+		
+		$('#menu').append(sel);
+		$('#menu').append(colorSel);
+		
+		//colorSel에서 색 선택할 때 이벤트 발생시킨다.
+		$('#menu>select:eq(1)').change(function(){
+			$("#article").css($("#menu>select:first").val(),$("#menu>select:last").val());
+		});
+		
+		//글자 크기 설정하는 버튼 추가
+		$("#menu").append('<input type="button" value="-"/>');
+		$("#menu").append('<input type="button" value="0"/>');
+		$("#menu").append('<input type="button" value="+"/>');
+		
+		$("#menu>input").click(function(){
+			//index() : 이벤트가 발생한 버튼은 input태그들 중에 몇번째 있는지 index를 구한다.
+			var idx = $("#menu>input").index(this);
+			
+			//현재 글자 크기
+			var fontSize = parseInt($('#article').css('font-size')); //16px에서 px삭제하고 16만 남음
+			if(idx==0){// -버튼선택
+				fontSize--;
+			}else if(idx==1){// 0버튼
+				fontSize=16;
+			}else if(idx==2){// +버튼
+				fontsize++;
+			}
+			//문자크기 변경하기
+			$('#article').css('font-size',fontSize+'px');
+		});
+		
+		//$('#article').css('font-size','2em'); //pt,px,cm,mm,in,em,...
+		console.log($("#article").css('font-size'));
+	});
+</script>
+</head>
+<body>
+<div id='menu'></div>
+<hr/>
+<div id='article'>
+금리 인상으로 전세자금대출 이자 부담이 커진 데다 전세 사기에 대한 우려가 확산되면서 전세보다 월세로 임대차 계약을 체결하는 수요자들이 늘었기 때문으로 풀이된다.
+15일 국토교통부의 실거래가 공개시스템 자료에 따르면, 2022년 서울 소형빌라 월세 거래 총 4만3917건 가운데 월세 100만원이 넘는 거래는 3018건으로 집계됐다. 이는 국토부가 관련 통계 집계를 시작한 2011년 이래 가장 많은 수치다.
+월세 100만원이 넘는 서울 소형빌라는 2011년부터 2019년까지 1000건 이하로 유지하다 2020년 1027건, 2021년 1693건으로 점차 증가하더니 작년에는 3000건을 돌파했다.
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" ></script>
+<style>
+	div{width:100px; height:100px; position:relative;border:1px solid #ddd;}
+	#d1{background-color:orange;}
+	#d2{background-color:yellow;}
+	#d3{background-color:green;}
+</style>
+<script>
+	$(function(){
+		//객체가 움직이도록 설정
+		//slow,fast,normal,밀리초
+		$("#d1").animate({left:800,width:200, top:500, opacity:0.5},3000);
+	})
+</script>
+</head>
+<body>
+	<div id="d1"></div>
+	<div id="d2"></div>
+	<div id="d3"></div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" ></script>
+<style>
+	.backColor{background-color:orange;}
+</style>
+<script>
+	$(function(){
+		//이벤트 처리 방법 1 ----------------------
+		//click
+		/*
+		$('h1').click(function(){
+			$('div').append('h1태그가 클릭됨<br/>');
+			
+			//this:이벤트가 발생한 h1태그
+			//$(this).css('background-color','orange');
+			$(this).toggleClass('backColor');
+		});*/
+		
+		//이벤트 처리 방법 2 ----------------------
+		$('h1').on('click',function(){
+			$(this).css('background-color','lightblue');
+		});
+		
+		//이벤트 처리 방법 3 ----------------------
+		//mouseover, mouseout
+		//mouseenter, mouseleave
+		/*
+			json : 회원정보
+			var member={
+				username : "홍길동", //key,value
+				tel : "010-1234-5678",
+				memberOutput : function() {
+					console.log('이름=','hong gil dong')
+				}
+			}
+		*/
+		//이벤트 처리 방법 4 ----------------------
+		//over시 핑크, out시 그레이
+		$('h1').on({mouseenter:function(){
+						//실행문
+						$(this).css('background-color','pink');
+					},mouseleave:function(){
+						//실행문
+						$(this).css('background-color','#ddd');
+					}});
+	});
+</script>
+</head>
+<body>
+	<h1>JQuery 이벤트 처리</h1>
+	<h1 id='h'>JQuery 이벤트 처리</h1>
+	<h1>JQuery 이벤트 처리</h1>
+	<h1>JQuery 이벤트 처리</h1>	
+	<div style="background-color:yellow"></div>
+</body>
+</html>
