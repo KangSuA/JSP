@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+	https://gist.github.com/coolniikou/665255
+	
+	<순서>
+	1. jquery.js
+	2. innerfade.js
+	
+ -->
+ <style>
+ 	ul,li{margin:0; padding:0; list-style-type:none;}
+ 	#innerImg img{width:400px; height:300px;}
+ </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" ></script>
+<script src="jquery.innerfade.js"></script>
+<script>
+	$(function(){
+		$("#innerImg").innerfade({
+			animationtype:'slide', // 기본 : 'fade', 'slide'
+			speed:'slow', //'slow','fast','normal',밀리초
+			timeout: 5000, // 쇼대기시간
+			type:'random' // 'random',기본:'sequence','random_start'
+		});
+	});
+</script>
+</head>
+<body>
+	<ul id="innerImg">
+		<li><a href="https://www.naver.com"><img src="/webApp/img/01.jfif"/></a></li>
+		<li><a href="https://www.nate.com"><img src="/webApp/img/02.jfif"/></a></li>
+		<li><a href="https://www.google.com"><img src="/webApp/img/glass1.gif"/></a></li>
+		<li><a href="https://www.daum.net"><img src="/webApp/img/glass2.gif"/></a></li>
+		<li><a href="https://www.kw.ac.kr"><img src="/webApp/img/glass3.gif"/></a></li>
+	</ul>
+</body>
+</html>
