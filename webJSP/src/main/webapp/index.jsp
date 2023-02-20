@@ -22,16 +22,19 @@
 <title>Insert title here</title>
 <%
 	for(int i=1; i<=10; i++) {
-		out.print(i+"<br/>");
+		//out.print(i+"<br/>");
 	}
 %>
 <script>
-	document.write("자바스크립트에서 출력 "+ new Date());
+	//document.write("자바스크립트에서 출력 "+ new Date());
 </script>
 </head>
 <body>
+<!-- 메뉴추가 -->
+<jsp:include page="jsp06_include/top.jsp"></jsp:include>
+
 <H1>JSP홈페이지</H1>
-<div>
+<div style="background-color:orange">
 	<a href="jsp02_response/login.html">로그인</a> 
 </div>
 <% //스크립트릿

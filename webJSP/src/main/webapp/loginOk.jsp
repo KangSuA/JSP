@@ -32,7 +32,7 @@
 	Connection conn = getConn();
 	
 	//3. SQL -> Statement 생성
-	String sql = "select count(userid) from register where userid=? and userpwd=?";
+	String sql = "select name, userid from register where userid=? and userpwd=?";
 	PreparedStatement pstmt = conn.prepareStatement(sql);
 	pstmt.setString(1, userid);
 	pstmt.setString(2, userpwd);
@@ -41,13 +41,10 @@
 	ResultSet rs = pstmt.executeQuery();
 	
 	//조회결과에 따른 처리
-	rs.next();
-	int result = rs.getInt(1);
+	//rs.next();
+	//int result = rs.getInt(1);
 	
-	//5. 종료
-	rs.close();
-	pstmt.close();
-	conn.close();
+	
 	/*
 	if(result>0){//로그인 성공
 		//홈페이지로 이동하기
@@ -60,8 +57,18 @@
 		response.sendRedirect(request.getContextPath()+"/jsp02_response/login.html");
 	}*/
 	
-	if(result>0){
+	if(rs.next()){
 		//로그인 성공
+		//세션에 로그인정보 기록하기
+		session.setAttribute("logId", rs.getString(2));
+		session.setAttribute("logName", rs.getString(1));
+		session.setAttribute("logStatus","Y");
+		
+		//5. 종료
+		rs.close();
+		pstmt.close();
+		conn.close();
+		
 		%>
 		<script>
 			alert("로그인 성공하였습니다. 홈페이지로 이동합니다.");
