@@ -1,3 +1,6 @@
+<%@page import="com.multicampus.home.board.BoardDTO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.multicampus.home.board.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,6 +15,12 @@
 	}
 	#lst>li:nth-child(5n+2){
 		width:60%;
+		white-space:nowrap; /*줄안바꿈*/ 
+		overflow:hidden; /*넘치는 데이터 숨기기*/
+		text-overflow:ellipsis; /*말줄임표시*/
+	}
+	#lst>li:nth-child(5n){
+		text-align:center;
 	}
 </style>
 </head>
@@ -25,18 +34,20 @@
 		<li>작성자</li>
 		<li>등록일</li>
 		<li>조회수</li>
+<!-- 				 -->
+<%
+	BoardDAO dao = new BoardDAO();
+	List<BoardDTO> list = dao.boardAllRecord();
+	for(int i=0; i<list.size(); i++){
+		BoardDTO dto = list.get(i);
+%>
+		<li><%=dto.getNo()%></li>
+		<li><a href="<%=request.getContextPath()%>/board/boardView.jsp?no=<%=dto.getNo()%>"><%=dto.getSubject()%></a></li>
+		<li><%=dto.getUserid()%></li>
+		<li><%=dto.getWritedate()%></li>
+		<li><%=dto.getHit()%></li>
+	<%} %>
 		
-		<li>100</li>
-		<li>글등록 잘될까.</li>
-		<li>goguma</li>
-		<li>02-20-17:30</li>
-		<li>3</li>
-		
-		<li>99</li>
-		<li>오늘 놀러가자</li>
-		<li>goguma</li>
-		<li>02-19 04:20</li>
-		<li>1</li>
 	</ul>
 </div>
 </body>

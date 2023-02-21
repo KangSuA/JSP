@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-body, ul, li {margin;0; padding:0;}
+body, ul, li {margin:0; padding:0;}
 ul, li {list-style-type:none;}
-a:link, a:visit, a:hover{
+a:link, a:visited, a:hover{
 	text-decoration:none; color:#444;
 }
 .container{
-		width:800px; margin:0 auto;
+		width:900px; margin:0 auto;
 	}

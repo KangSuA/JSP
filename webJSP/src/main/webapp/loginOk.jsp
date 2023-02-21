@@ -32,7 +32,7 @@
 	Connection conn = getConn();
 	
 	//3. SQL -> Statement 생성
-	String sql = "select name, userid from register where userid=? and userpwd=?";
+	String sql = "select username, userid from register where userid=? and userpwd=?";
 	PreparedStatement pstmt = conn.prepareStatement(sql);
 	pstmt.setString(1, userid);
 	pstmt.setString(2, userpwd);
