@@ -32,8 +32,8 @@
 				<%} %>
 			</li>
 			<li><a href="/webJSP/board/boardList.jsp">게시판</a></li>
-			<li>jstl</li>
-			<li>ajax</li>
+			<li><a href="/webJSP/jstl/jstlMain.jsp" >jstl</a></li>
+			<li><a href="/webJSP/ajax/ajaxMain.jsp">ajax</a></li>
 		</ul>
 	</div>
 </div>
